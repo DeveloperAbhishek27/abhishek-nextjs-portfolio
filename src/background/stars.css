@@ -1,0 +1,71 @@
+.star-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(ellipse at bottom, #0a0a15 0%, #000 100%);
+}
+
+/* ===== Stars ===== */
+.stars {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  animation: moveStars linear infinite;
+  will-change: transform;
+}
+
+.layer1 {
+  background-image:
+    radial-gradient(3px 2px at 20px 30px, white, transparent),
+    radial-gradient(1px 1px at 100px 80px, white, transparent),
+    radial-gradient(1px 1px at 160px 120px, white, transparent);
+  background-size: 200px 200px;
+  animation-duration: 31s;
+}
+
+.layer2 {
+  background-image:
+    radial-gradient(1.5px 1.5px at 50px 50px, white, transparent),
+    radial-gradient(1.5px 1.5px at 120px 150px, white, transparent);
+  background-size: 150px 150px;
+  animation-duration: 35s;
+  opacity: 0.7;
+}
+
+.layer3 {
+  opacity: 0.3;
+  animation: moveStars3 20s linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* ===== Shooting Stars ===== */
+
+.shooting-star.delay {
+  top: 60%;
+  animation-delay: 2s;
+}
+
+.star-wrapper,
+.stars,
+.nebula,
+.galaxy {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .stars,
+  .galaxy,
+  .shooting-star {
+    animation: none !important;
+  }
+}
