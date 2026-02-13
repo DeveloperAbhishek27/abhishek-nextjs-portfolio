@@ -49,7 +49,7 @@ const ScrollTop = () => {
           cx="50"
           cy="50"
           r="45"
-          stroke="#cf0213"
+          stroke="#ed7905"
           strokeWidth="10"
           strokeDasharray="282.6"
           strokeDashoffset={282.6 - (282.6 * scroll) / 100}
