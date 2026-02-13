@@ -2,110 +2,65 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { experiences } from "@/constants/Index";
 import { styles } from "@/styles/Styles";
-
-const cardVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
+import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const Experience = () => {
   return (
-    <section className="relative py-20 container mx-auto px-6">
+    <section
+      data-scroll-section
+      className="container mx-auto px-6 sm:px-12 mt-12"
+    >
       {/* Heading */}
-      <div className=" mb-16 text-white">
-        <p className={`${styles.sectionSubText} text-blue-200`}>
-          what I have Skill so far
-        </p>
-        <h2 className={styles.heroHeadText}>Skills</h2>
-      </div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="mb-12"
+      >
+        <motion.h2 variants={fadeUp} className={styles.sectionHeadText}>
+          Professional Experience
+        </motion.h2>
+      </motion.div>
 
-      <div className="relative w-full ">
-        <div className="absolute flex  left-3  lg:left-1/2 top-0 w-1 h-full bg-white transform -translate-x-1/2"></div>
+      {/* Card */}
+      <motion.div
+        variants={fadeUp}
+        className="grid md:grid-cols-[1fr_300px] gap-6 border border-white/20 rounded-4xl bg-cardbg overflow-hidden"
+      >
+        {/* Text */}
+        <div className="p-8">
+          <p className="text-white font-black text-[48px] leading-none">"</p>
 
-        {experiences.map((experience, index) => (
-          <motion.div
-            key={index}
-            custom={index}
-            variants={cardVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className={`mb-16   flex ${
-              index % 2 === 0
-                ? "justify-start lg:mr-12"
-                : " lg:ml-12 justify-start lg:justify-end"
-            }`}
-          >
-            <div className="absolute -left-5 lg:left-1/2  lg:-translate-x-1/2  z-20">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl border-4 border-white"
-                style={{ background: experience.iconBg }}
-              >
-                <img
-                  src={experience.icon}
-                  alt={experience.company_name}
-                  className="w-10 h-10 object-contain"
-                />
-              </div>
-              <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-5 w-max">
-                <p
-                  className={`text-sm text-gray-900  font-semibold whitespace-nowrap ${
-                    index % 2 === 0
-                      ? "ml-72 text-left bg-white rounded-r-4xl py-2  px-4"
-                      : "mr-72 text-right bg-white rounded-l-4xl py-2  px-4"
-                  }`}
-                >
-                  {experience.date}
-                </p>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 px-6 lg:ml-0  ml-6">
-              <div
-                className={`bg-cardbg mt-5  p-6 rounded shadow border border-gray-200/20  border-b-4 border-b-white
-                 `}
-              >
-                {/* Icon */}
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-full">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-xl font-bold text-white">
-                        {experience.title}
-                      </h3>
-                      <p
-                        className={`text-sm lg:hidden text-gray-300 whitespace-nowrap `}
-                      >
-                        {experience.date}
-                      </p>
-                    </div>
-                    <p className="text-premium text-sm font-medium">
-                      {experience.company_name}
-                    </p>
-                  </div>
-                </div>
+          <p className="text-white tracking-wide text-[17px] mt-3">
+            I worked as a Frontend Developer at EC Sales Private Limited, an
+            Australia-based company, from May 2025 to January 2026. I designed
+            and developed responsive user interfaces using React.js and Tailwind
+            CSS, and handled REST API integrations to manage dynamic data across
+            multiple projects. I collaborated with backend developers to ensure
+            smooth functionality and performance and received an official
+            Experience Letter for my contributions.
+          </p>
 
-                {/* Points */}
-                <ul className="list-disc ml-5 space-y-2">
-                  {experience.points.map((point, i) => (
-                    <li key={i} className="text-gray-300 text-sm tracking-wide">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+          <div className="mt-6">
+            <p className="text-white font-semibold">Abhishek Pandey</p>
+            <p className="text-sm text-gray-400">
+              Frontend Developer ·
+              <span className="text-yellow-400"> EC Sales Private Limited</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="p-8  flex justify-center items-center bg-black-200">
+          <img
+            src="/img/EcSales.png"
+            alt="EC Sales Experience Letter"
+            className="w-full h-[200px] object-contain"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };

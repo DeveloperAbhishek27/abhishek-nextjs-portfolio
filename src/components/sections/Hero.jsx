@@ -1,14 +1,16 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { styles } from "@/styles/Styles";
 import { fadeUp, fadeIn, scaleIn, staggerContainer } from "@/lib/animations";
 import Tilt from "react-parallax-tilt";
 const Hero = () => {
   return (
-    <section className="relative w-full  py-32 lg:py-16 lg:min-h-screen flex items-center justify-center ">
+    <section
+      data-scroll-section
+      className="relative w-full  py-32 lg:py-16 lg:min-h-screen flex items-center justify-center "
+    >
       <div className="grid lg:grid-cols-[1fr_400px] sm:mt-0 mt-10 gap-4 overflow-hidden">
         <motion.div
           variants={staggerContainer}
@@ -30,7 +32,7 @@ const Hero = () => {
             <motion.h1
               variants={fadeUp}
               className={`  font-extrabold text-transparent bg-clip-text 
-            bg-gradient-to-r from-white via-premium/80 to-premium
+            bg-gradient-to-r from-white via-premium/90 to-premium
             text-4xl sm:text-6xl lg:text-7xl leading-tight`}
             >
               Hi, I'm Abhishek
@@ -56,14 +58,24 @@ const Hero = () => {
               variants={scaleIn}
               className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4"
             >
-              <Link
-                href="#contact"
-                className="px-7 py-3 rounded-full font-semibold
+              <div
+                onClick={() => {
+                  const section = document.getElementById("contact");
+                  if (section) {
+                    const yOffset = -90;
+                    const y =
+                      section.getBoundingClientRect().top +
+                      window.pageYOffset +
+                      yOffset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+                className="px-7 cursor-pointer py-3 rounded-full font-semibold
               bg-premium text-white
                transition-transform duration-initial"
               >
                 Hire Me
-              </Link>
+              </div>
 
               <a
                 href="/Abhishek_resume.pdf"
@@ -101,15 +113,27 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-10 flex justify-center w-full">
-        <Link href="#about">
-          <div className="w-8 h-14 rounded-2xl border-2 border-premium/40 flex justify-center p-2">
+        <div
+          onClick={() => {
+            const section = document.getElementById("about");
+            if (section) {
+              const yOffset = -80; // adjust for header
+              const y =
+                section.getBoundingClientRect().top +
+                window.pageYOffset +
+                yOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }
+          }}
+        >
+          <div className="w-8 h-14 cursor-pointer rounded-2xl border-4 border-premium/70 flex justify-center p-2">
             <motion.div
               animate={{ y: [0, 18, 0] }}
               transition={{ duration: 1.4, repeat: Infinity }}
               className="w-2 h-2 bg-premium rounded-full"
             />
           </div>
-        </Link>
+        </div>
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ const ServiceCard = ({ title, icon, hover }) => {
     <motion.div variants={scaleIn} viewport={{ once: true, amount: 0.9 }}>
       <Tilt>
         <div className="w-full bg-gradient-to-l from-premium/75 to-premium/30 p-0.5 rounded-4xl shadow-lg">
-          <div className="bg-cardbg rounded-4xl py-6 px-8 min-h-64 flex flex-col justify-center items-center gap-5 relative group overflow-hidden">
+          <div className="bg-black rounded-4xl py-6 px-8 min-h-64 flex flex-col justify-center items-center gap-5 relative group overflow-hidden">
             {/* Image Icon */}
             <img src={icon} alt={title} className="w-24 h-24 object-contain" />
 
@@ -34,7 +34,11 @@ const ServiceCard = ({ title, icon, hover }) => {
 
 const About = () => {
   return (
-    <section id="about" className=" container mx-auto py-12 px-6">
+    <section
+      data-scroll-section
+      id="about"
+      className=" container mx-auto py-12 px-6 sm:px-12"
+    >
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -46,7 +50,7 @@ const About = () => {
 
         <motion.p
           variants={fadeUp}
-          className="mt-6 text-gray-300 leading-relaxed max-w-3xl"
+          className="mt-6 text-gray-300 leading-relaxed max-w-4xl"
         >
           I specialize in crafting high-performance and visually engaging web
           applications using modern frontend technologies such as React.js,
@@ -64,7 +68,7 @@ const About = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.4 }}
         className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4  gap-8"
       >
         {services.map((service, i) => (

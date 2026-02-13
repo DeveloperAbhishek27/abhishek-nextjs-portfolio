@@ -26,18 +26,18 @@ const services = [
 ];
 
 const experiences = [
-  {
-    title: "Frontend Developer – EC Sale Pvt. Ltd.",
-    icon: "/experience/ecsales.webp",
-    iconBg: "#000000",
-    date: "May 2025 - Jan 2026",
-    points: [
-      "Developed and maintained company website using React.js and Tailwind CSS.",
-      "Integrated REST APIs and improved performance optimization.",
-      "Implemented SEO using React Helmet.",
-      "Collaborated with cross-functional teams to deliver scalable solutions.",
-    ],
-  },
+  // {
+  //   title: "Frontend Developer – EC Sale Pvt. Ltd.",
+  //   icon: "/experience/ecsales.webp",
+  //   iconBg: "#000000",
+  //   date: "May 2025 - Jan 2026",
+  //   points: [
+  //     "Developed and maintained company website using React.js and Tailwind CSS.",
+  //     "Integrated REST APIs and improved performance optimization.",
+  //     "Implemented SEO using React Helmet.",
+  //     "Collaborated with cross-functional teams to deliver scalable solutions.",
+  //   ],
+  // },
   {
     title: "React.js",
     icon: "/experience/react.png",
@@ -95,78 +95,96 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I have completed a Full Stack Web Development certification from Ducat IT Development School, gaining expertise in React.js, HTML, CSS, JavaScript, and Node.js. This program enhanced my skills in building dynamic, responsive, and scalable web applications.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "I worked as a Frontend Web Developer Intern at EC Sales Private Limited from May 2025 to January 2026. During this period, I contributed to real-world production projects, building responsive and user-friendly interfaces using React.js, JavaScript, HTML, and CSS. I collaborated with designers and backend developers and was awarded an official Internship Experience Letter recognizing my performance and contributions.",
+    name: "Abhishek Pandey",
+    designation: "Frontend Web Developer (Intern)",
+    company: "EC Sales Private Limited",
+    image: "/img/ecsales.png",
+  },
+  {
+    testimonial:
+      "I completed a Frontend Web Development training program at Ducat IT Training School, where I gained strong practical knowledge of React.js, JavaScript, HTML, CSS, and modern UI development practices. During the program, I worked on multiple hands-on projects that helped me build a solid foundation in frontend development. I was awarded a training completion certificate in PDF format.",
+    name: "Abhishek Pandey",
+    designation: "Frontend Development Trainee",
+    company: "Ducat IT Training School",
+    image: "/img/ducat copy.png",
   },
 ];
 
 const projects = [
   {
-    name: "Ducat India Website",
+    name: "EC Sale Pvt. Ltd. – Official Website",
     description:
-      "A modern and fully responsive educational website for Ducat India, built using React, Tailwind CSS, and Framer Motion. It provides details about  courses, placements, and online registration.",
+      "Designed and developed the official corporate website of EC Sale Pvt. Ltd. using React.js and Tailwind CSS. Implemented SEO optimization with React Helmet, smooth UI animations using Framer Motion, and ensured full responsiveness across devices with optimized performance.",
     tags: [
-      {
-        name: "React.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwind CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Framer Motion",
-        color: "pink-text-gradient",
-      },
+      { name: "React.js", color: "text-cyan-400" },
+      { name: "Tailwind CSS", color: "text-emerald-400" },
+      { name: "Framer Motion", color: "text-fuchsia-400" },
+      { name: "React Helmet", color: "text-amber-400" },
     ],
-    image: "./ducat.png",
-    source_code_link: "https://github.com/abhishek-pandey/ducat-website",
+    image: "/img/EcSales.png",
+    github_link: null,
+    live_link: "https://www.ecsale.com.au/",
   },
 
   {
-    name: "Todo List",
+    name: "Authentication & Dashboard System",
     description:
-      "A simple and efficient Todo List web application built with React and Bootstrap. It allows users to add, edit, and delete tasks, helping them stay organized. The responsive design experience across all devices.",
+      "Built a complete authentication flow with JWT token handling, protected routes, and a responsive dashboard. Integrated simulated APIs, managed global state using Context API, and implemented smooth transitions with Framer Motion.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "json",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "pink-text-gradient",
-      },
+      { name: "React.js", color: "text-cyan-400" },
+      { name: "JWT Auth", color: "text-lime-400" },
+      { name: "Context API", color: "text-violet-400" },
+      { name: "Tailwind CSS", color: "text-emerald-400" },
     ],
-    image: "./todo list.png",
-    source_code_link: "https://github.com/",
+    image: "/img/user-management-system.png",
+    github_link:
+      "https://github.com/DeveloperAbhishek27/authentication-dashboard-react",
+    live_link: "https://auth-dashboard-create-by-abhishek.netlify.app/",
+  },
+
+  {
+    name: "React CRUD Application",
+    description:
+      "Developed a full-featured CRUD application with dynamic API integration. Implemented real-time data rendering, optimized UI performance, and ensured seamless user interaction across devices.",
+    tags: [
+      { name: "React.js", color: "text-cyan-400" },
+      { name: "REST API", color: "text-sky-400" },
+      { name: "Tailwind CSS", color: "text-emerald-400" },
+      { name: "CRUD", color: "text-orange-400" },
+    ],
+    image: "/img/todo list.png",
+    github_link: "https://github.com/DeveloperAbhishek27/react-crud-app",
+    live_link: "https://my-crud-app-27.netlify.app/",
+  },
+
+  {
+    name: "Ducat India Clone Website",
+    description:
+      "Built a responsive clone of the Ducat India website using React.js, React Router, and Tailwind CSS. Implemented smooth animations with Framer Motion and optimized routing with React Hooks for efficient state management.",
+    tags: [
+      { name: "React.js", color: "text-cyan-400" },
+      { name: "React Router", color: "text-indigo-400" },
+      { name: "Framer Motion", color: "text-fuchsia-400" },
+      { name: "Tailwind CSS", color: "text-emerald-400" },
+    ],
+    image: "/img/ducat.png",
+    github_link: null,
+    live_link: "https://ducat-site-by-abhishek.netlify.app/",
   },
   {
-    name: "Portfolio website",
+    name: "Personal Portfolio Website",
     description:
-      "A responsive portfolio built with HTML, CSS, and JavaScript, showcasing my skills, projects, and experience with an interactive design.",
+      "Designed and developed my personal portfolio website using pure HTML, CSS, and JavaScript. Focused on responsive layout, smooth scrolling, interactive UI elements, and clean modern design to showcase projects and skills effectively.",
     tags: [
-      {
-        name: "Html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Java-script",
-        color: "pink-text-gradient",
-      },
+      { name: "HTML5", color: "text-orange-400" },
+      { name: "CSS3", color: "text-sky-400" },
+      { name: "JavaScript", color: "text-yellow-400" },
+      { name: "Responsive Design", color: "text-emerald-400" },
     ],
-    image: "./portfolio.png",
-    source_code_link: "https://github.com/",
+    image: "/img/portfolio.png", // apni image yaha daal dena
+    github_link: "https://github.com/DeveloperAbhishek27/portfolio",
+    live_link: null,
   },
 ];
 
