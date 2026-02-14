@@ -31,9 +31,9 @@ export default function Home() {
       <ScrollTop />
       <Hero />
       <About />
+      <Experience />
       <Skills />
       <Projects />
-      <Experience />
       <Certificate />
       <Contact />
     </div>
