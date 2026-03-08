@@ -142,6 +142,22 @@ const projects = [
       "https://github.com/DeveloperAbhishek27/authentication-dashboard-react",
     live_link: "https://auth-dashboard-create-by-abhishek.netlify.app/",
   },
+  {
+    name: "JSONPlaceholder API Explorer",
+    description:
+      "Developed a modern API Explorer using Next.js with dynamic routing and scalable component architecture. Integrated the JSONPlaceholder REST API using the Fetch API to display users, posts, albums, comments, and photos with real-time data rendering. Implemented SEO optimization with Next.js metadata, responsive UI using Tailwind CSS, and smooth animations with Framer Motion. Enhanced user interaction with React Tilt effects and ensured clean navigation across multiple routes for an optimized user experience.",
+    tags: [
+      { name: "Next.js", color: "text-white" },
+      { name: "REST API", color: "text-sky-400" },
+      { name: "Tailwind CSS", color: "text-emerald-400" },
+      { name: "Framer Motion", color: "text-fuchsia-400" },
+      { name: "React Tilt", color: "text-purple-400" },
+    ],
+    image: "/img/jesonPlaceHolder.png",
+    github_link:
+      "https://github.com/DeveloperAbhishek27/jsonplaceholder-explorer",
+    live_link: "https://jsonplaceholder-explorer.netlify.app/",
+  },
 
   {
     name: "React CRUD Application",

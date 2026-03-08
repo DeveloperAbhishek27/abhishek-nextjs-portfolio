@@ -19,7 +19,7 @@ export default function Home() {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
       smooth: true,
-      multiplier: 1, // speed, adjust as you like
+      multiplier: 1,
       class: "is-reveal",
     });
 
