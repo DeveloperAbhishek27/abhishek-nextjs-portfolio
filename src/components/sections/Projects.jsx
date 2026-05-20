@@ -19,77 +19,81 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeUp} className="h-full">
-      <Tilt
-        tiltMaxAngleX={2}
-        tiltMaxAngleY={2}
-        scale={1.01}
-        transitionSpeed={400}
-        className="group bg-cardbg rounded-4xl overflow-hidden 
-        grid grid-cols-1 md:grid-cols-[400px_1fr] 
+      <div className="w-full bg-gradient-to-l from-premium/75 to-premium/30 p-[1px] rounded-4xl shadow-lg">
+        <Tilt
+          tiltMaxAngleX={2}
+          tiltMaxAngleY={2}
+          scale={1.01}
+          transitionSpeed={400}
+          className="group bg-black rounded-4xl overflow-hidden 
+        grid grid-cols-1 md:grid-cols-[450px_1fr] 
         shadow 
-        border border-white/20 p-1"
-      >
-        {/* Image */}
-        <div className="relative w-full h-48 md:h-full rounded-4xl  ">
-          <Image
-            src={image}
-            alt={name}
-            fill
-            className="object-cover w-full h-full p-3 rounded-4xl"
-          />
+        border border-white/20 p-1 "
+        >
+          <div className="relative w-full h-48 md:h-full rounded-4xl  ">
+            <Image
+              src={image}
+              alt={name}
+              fill
+              className="object-cover w-full h-full p-3 rounded-4xl"
+            />
 
-          <div className="  rounded-4xl   z-20  absolute right-2  flex gap-2 justify-end items-start px-2 py-1  top-3  ">
-            {/* GitHub Button */}
-            {github_link && (
-              <div
-                onClick={() => window.open(github_link, "_blank")}
-                className="bg-black/70  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition"
-              >
-                <Image
-                  src="/img/github.png"
-                  alt="github"
-                  width={20}
-                  height={20}
-                />
-              </div>
-            )}
+            <div className="  rounded-4xl   z-20  absolute right-2  flex gap-2 justify-end items-start px-2 py-1  top-3  ">
+              {github_link && (
+                <div
+                  onClick={() => window.open(github_link, "_blank")}
+                  className="bg-black/70  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer "
+                >
+                  <Image
+                    src="/img/github.png"
+                    alt="github"
+                    width={20}
+                    height={20}
+                  />
+                </div>
+              )}
 
-            {/* Live Link Button */}
-            {live_link && (
-              <button
-                onClick={() => window.open(live_link, "_blank")}
-                className="bg-black/30 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 hover:bg-black/40 transition"
-              >
-                <FiExternalLink className="text-white text-[20px]" />
-              </button>
-            )}
+              {/* Live Link Button */}
+              {live_link && (
+                <button
+                  onClick={() => window.open(live_link, "_blank")}
+                  className="bg-black/30 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 hover:bg-black/40 transition"
+                >
+                  <FiExternalLink className="text-white text-[20px]" />
+                </button>
+              )}
+            </div>
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex justify-end items-start rounded-4xl"></div>
           </div>
-          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex justify-end items-start rounded-4xl"></div>
-        </div>
 
-        {/* Content */}
-        <div className="p-6 flex flex-col justify-center">
-          <h3 className="text-white font-semibold text-[20px] md:text-[22px] mb-3">
-            {name}
-          </h3>
+          <div className="p-6 flex flex-col justify-center">
+            <h3 className="text-white font-semibold text-[20px] md:text-[22px] mb-3">
+              {name}
+            </h3>
 
-          <p className="text-gray-300 text-[14px] md:text-[15px] leading-[24px]">
-            {description}
-          </p>
+            <p className="text-gray-300 text-[14px] md:text-[15px] leading-[24px]">
+              {description}
+            </p>
 
-          {/* Tags */}
-          <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span
-                key={tag.name}
-                className={`text-[12px] md:text-[13px] ${tag.color}`}
-              >
-                #{tag.name}
-              </span>
-            ))}
+            {/* Tags */}
+            <div className="mt-4 flex flex-wrap gap-3">
+              {tags.map((tag) => (
+                <div
+                  key={tag.name}
+                  className="flex items-center gap-2 p-2 rounded-xl
+      bg-gradient-to-l from-premium/75 to-premium/70 "
+                >
+                  <img
+                    src={tag.icon}
+                    alt={tag.name}
+                    className="w-8 h-8  scale-110 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </Tilt>
+        </Tilt>
+      </div>
     </motion.div>
   );
 };

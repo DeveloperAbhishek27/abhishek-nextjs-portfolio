@@ -71,7 +71,7 @@ const Hero = () => {
                   }
                 }}
                 className="px-7 cursor-pointer py-3 rounded-full font-semibold
-              bg-premium text-white
+              bg-premium/70 border-2 border-premium text-white
                transition-transform duration-initial"
               >
                 Hire Me

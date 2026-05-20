@@ -21,7 +21,7 @@ const Experience = () => {
       </div>
 
       <div className="relative w-full ">
-        <div className="absolute flex  left-3  lg:left-1/2 top-0 w-1 h-full bg-white transform -translate-x-1/2"></div>
+        <div className="absolute flex  left-3  lg:left-1/2 top-0 w-1 h-full bg-premium/70 transform -translate-x-1/2"></div>
 
         {experiences.map((experience, index) => (
           <motion.div
@@ -39,7 +39,7 @@ const Experience = () => {
           >
             <div className="absolute -left-5 lg:left-1/2  lg:-translate-x-1/2  z-20">
               <div
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl border-4 border-white"
+                className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl border-4 border-premium/70"
                 style={{ background: experience.iconBg }}
               >
                 <img
@@ -50,10 +50,10 @@ const Experience = () => {
               </div>
               <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-5 w-max">
                 <p
-                  className={`text-sm text-gray-900  font-semibold whitespace-nowrap ${
+                  className={`text-sm text-gray-100  font-semibold whitespace-nowrap ${
                     index % 2 === 0
-                      ? "ml-72 text-left bg-white rounded-r-4xl py-2  px-4"
-                      : "mr-72 text-right bg-white rounded-l-4xl py-2  px-4"
+                      ? "ml-72 text-left bg-premium/70 rounded-r-4xl py-2  px-4"
+                      : "mr-72 text-right bg-premium/70 rounded-l-4xl py-2  px-4"
                   }`}
                 >
                   {experience.date}
@@ -62,7 +62,7 @@ const Experience = () => {
             </div>
             <div className="w-full md:w-1/2 px-6 lg:ml-0  ml-6">
               <div
-                className={`bg-cardbg mt-5  p-6 rounded shadow border border-gray-200/20  border-b-4 border-b-white
+                className={`bg-black mt-5  p-6 rounded shadow border border-gray-200/20  border-b-4 border-b-premium/70
                  `}
               >
                 {/* Icon */}

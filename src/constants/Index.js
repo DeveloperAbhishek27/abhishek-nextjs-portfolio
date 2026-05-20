@@ -7,7 +7,7 @@ const services = [
   },
   {
     title: "React Js Developer",
-    icon: "/about/react.png",
+    icon: "/experience/react.png",
     hover:
       "React.js is a JavaScript library used to build dynamic, interactive user interfaces with reusable components.",
   },
@@ -113,14 +113,66 @@ const testimonials = [
 
 const projects = [
   {
+    name: "DevNest Dashboard – Full Stack Productivity Platform",
+    description:
+      "Developed a full-stack productivity dashboard using Next.js, Node.js, Express.js, and MongoDB Atlas. Implemented secure JWT authentication with protected routes and user profile management. Added features like Keep Notes, mini games, and AI-powered tools for enhanced productivity and engagement. Designed a responsive modern UI with smooth user experience and scalable backend architecture.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "text-white",
+        icon: "/about/nextjs.png",
+      },
+      {
+        name: "Node.js",
+        color: "text-green-400",
+        icon: "/img2.webp",
+      },
+      {
+        name: "Express.js",
+        color: "text-gray-300",
+        icon: "/img3.webp",
+      },
+      {
+        name: "MongoDB Atlas",
+        color: "text-emerald-400",
+        icon: "/img4M.webp",
+      },
+      {
+        name: "JWT Auth",
+        color: "text-lime-400",
+        icon: "/img5J.webp",
+      },
+      {
+        name: "AI Integration",
+        color: "text-fuchsia-400",
+        icon: "/img6AI.webp",
+      },
+    ],
+    image: "/img/dev1.png",
+    github_link: "https://github.com/DeveloperAbhishek27/DevNest-dashboard",
+    live_link: "https://dev-nest-dashboard.vercel.app/",
+  },
+
+  {
     name: "EC Sale Pvt. Ltd. – Official Website",
     description:
       "Designed and developed the official corporate website of EC Sale Pvt. Ltd. using React.js and Tailwind CSS. Implemented SEO optimization with React Helmet, smooth UI animations using Framer Motion, and ensured full responsiveness across devices with optimized performance.",
     tags: [
-      { name: "React.js", color: "text-cyan-400" },
-      { name: "Tailwind CSS", color: "text-emerald-400" },
-      { name: "Framer Motion", color: "text-fuchsia-400" },
-      { name: "React Helmet", color: "text-amber-400" },
+      {
+        name: "React.js",
+        color: "text-cyan-400",
+        icon: "/experience/react.png",
+      },
+      {
+        name: "API",
+        color: "text-emerald-400",
+        icon: "/img7API.webp",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "text-emerald-400",
+        icon: "/experience/tailwind.png",
+      },
     ],
     image: "/img/EcSales.png",
     github_link: null,
@@ -132,26 +184,53 @@ const projects = [
     description:
       "Built a complete authentication flow with JWT token handling, protected routes, and a responsive dashboard. Integrated simulated APIs, managed global state using Context API, and implemented smooth transitions with Framer Motion.",
     tags: [
-      { name: "React.js", color: "text-cyan-400" },
-      { name: "JWT Auth", color: "text-lime-400" },
-      { name: "Context API", color: "text-violet-400" },
-      { name: "Tailwind CSS", color: "text-emerald-400" },
+      {
+        name: "React.js",
+        color: "text-cyan-400",
+        icon: "/experience/react.png",
+      },
+      {
+        name: "MongoDB Atlas",
+        color: "text-emerald-400",
+        icon: "/img4M.webp",
+      },
+      {
+        name: "JWT Auth",
+        color: "text-lime-400",
+        icon: "/img5J.webp",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "text-emerald-400",
+        icon: "/experience/tailwind.png",
+      },
     ],
     image: "/img/user-management-system.png",
     github_link:
       "https://github.com/DeveloperAbhishek27/authentication-dashboard-react",
     live_link: "https://auth-dashboard-create-by-abhishek.netlify.app/",
   },
+
   {
     name: "JSONPlaceholder API Explorer",
     description:
       "Developed a modern API Explorer using Next.js with dynamic routing and scalable component architecture. Integrated the JSONPlaceholder REST API using the Fetch API to display users, posts, albums, comments, and photos with real-time data rendering. Implemented SEO optimization with Next.js metadata, responsive UI using Tailwind CSS, and smooth animations with Framer Motion. Enhanced user interaction with React Tilt effects and ensured clean navigation across multiple routes for an optimized user experience.",
     tags: [
-      { name: "Next.js", color: "text-white" },
-      { name: "REST API", color: "text-sky-400" },
-      { name: "Tailwind CSS", color: "text-emerald-400" },
-      { name: "Framer Motion", color: "text-fuchsia-400" },
-      { name: "React Tilt", color: "text-purple-400" },
+      {
+        name: "Next.js",
+        color: "text-white",
+        icon: "/about/nextjs.png",
+      },
+      {
+        name: "API",
+        color: "text-emerald-400",
+        icon: "/img7API.webp",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "text-emerald-400",
+        icon: "/experience/tailwind.png",
+      },
     ],
     image: "/img/jesonPlaceHolder.png",
     github_link:
@@ -164,10 +243,21 @@ const projects = [
     description:
       "Developed a full-featured CRUD application with dynamic API integration. Implemented real-time data rendering, optimized UI performance, and ensured seamless user interaction across devices.",
     tags: [
-      { name: "React.js", color: "text-cyan-400" },
-      { name: "REST API", color: "text-sky-400" },
-      { name: "Tailwind CSS", color: "text-emerald-400" },
-      { name: "CRUD", color: "text-orange-400" },
+      {
+        name: "React.js",
+        color: "text-cyan-400",
+        icon: "/experience/react.png",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "text-emerald-400",
+        icon: "/experience/tailwind.png",
+      },
+      {
+        name: "mongoDB",
+        color: "text-orange-400",
+        icon: "/img4M.webp",
+      },
     ],
     image: "/img/todo list.png",
     github_link: "https://github.com/DeveloperAbhishek27/react-crud-app",
@@ -179,29 +269,52 @@ const projects = [
     description:
       "Built a responsive clone of the Ducat India website using React.js, React Router, and Tailwind CSS. Implemented smooth animations with Framer Motion and optimized routing with React Hooks for efficient state management.",
     tags: [
-      { name: "React.js", color: "text-cyan-400" },
-      { name: "React Router", color: "text-indigo-400" },
-      { name: "Framer Motion", color: "text-fuchsia-400" },
-      { name: "Tailwind CSS", color: "text-emerald-400" },
+      {
+        name: "React.js",
+        color: "text-cyan-400",
+        icon: "/experience/react.png",
+      },
+      {
+        name: "API",
+        color: "text-emerald-400",
+        icon: "/img7API.webp",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "text-emerald-400",
+        icon: "/experience/tailwind.png",
+      },
     ],
     image: "/img/ducat.png",
     github_link: null,
     live_link: "https://ducat-site-by-abhishek.netlify.app/",
   },
+
   {
     name: "Personal Portfolio Website",
     description:
       "Designed and developed my personal portfolio website using pure HTML, CSS, and JavaScript. Focused on responsive layout, smooth scrolling, interactive UI elements, and clean modern design to showcase projects and skills effectively.",
     tags: [
-      { name: "HTML5", color: "text-orange-400" },
-      { name: "CSS3", color: "text-sky-400" },
-      { name: "JavaScript", color: "text-yellow-400" },
-      { name: "Responsive Design", color: "text-emerald-400" },
+      {
+        name: "HTML5",
+        color: "text-orange-400",
+        icon: "/imgHtml.webp",
+      },
+      {
+        name: "CSS3",
+        color: "text-sky-400",
+        icon: "/img9css.webp",
+      },
+      {
+        name: "JavaScript",
+        color: "text-yellow-400",
+        icon: "/experience/javascript.png",
+      },
     ],
-    image: "/img/portfolio.png", // apni image yaha daal dena
+    image: "/img/portfolio.png",
     github_link: "https://github.com/DeveloperAbhishek27/portfolio",
     live_link: null,
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, experiences, testimonials, projects };
